@@ -16,6 +16,7 @@ int main() {
 	unsigned short int st1ConInteger = stoi(st1);
 	
 	std::string n1ConString = std::to_string(n1);
+	float n1ConFloat = float(n1);
 
 	std::string n2ConString = std::to_string(n2);
 
@@ -34,6 +35,8 @@ int main() {
 	std::cout << "------------------------------------------------------------------------------------\n";
 
 	std::cout << n1 << " Integer to string: " << n1ConString << "\n";
+	std::cout << n1 << " Integer to float: " << n1ConFloat << "\n";
+	
 	std::cout << n2 << " Double to string: " << n2ConString << "\n";
 
 
