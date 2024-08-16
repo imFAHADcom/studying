@@ -2,7 +2,7 @@
 #include <string>
 
 
-void mySomeProcedure() {
+void mySumProcedure() {
 	int number1, number2;
 
 	std::cout << "please Enter Number1? \n";
@@ -15,7 +15,9 @@ void mySomeProcedure() {
 	std::cout << "************************\n" << number1 + number2 << std::endl;
 }
 
-int mySomeFunction() {
+
+
+int mySumFunction() {
 	int number1, number2;
 
 	std::cout << "please Enter Number1? \n";
@@ -32,11 +34,10 @@ int mySomeFunction() {
 
 int main() {
 
-	mySomeProcedure();	
+	mySumProcedure();	
 
 	std::cout << "\n\n\n";
-
-	std::cout << mySomeFunction() << std::endl;
+	std::cout << mySumFunction() << std::endl;
 
 
 	return 0;
