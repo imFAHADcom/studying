@@ -1,19 +1,16 @@
 #include <iostream>
 #include <string>
 
-void printName(std::string fullName){
+void printName(){
 	
-	std::cout << "Enter your full name, Please? \n";
-	getline(std::cin, fullName);
-	std::cout << "My name: " << fullName << std::endl;
+	std::cout << "My name: NoName " << std::endl;
 	
 }
 
 
 int main() {
-	std::string yourName;
 
-	printName(yourName);
+	printName();
 
 	return 0;
 }
