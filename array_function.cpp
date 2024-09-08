@@ -10,11 +10,9 @@ void readGPA(float GPA[3]) {
 	std::cin >> GPA[2];
 }
 
-void printGPA(float GPA[3]) {
+float calculateGPAaverage(float GPA[3]) {
 	
-	std::cout << "*****************************\n";
-	float GPAaverage = (GPA[0] + GPA[1] + GPA[2]) / 3;
-	std::cout << "The average of grande is: " << GPAaverage << std::endl;
+	return (GPA[0] + GPA[1] + GPA[2]) / 3;
 }
 
 int main() {
@@ -24,10 +22,11 @@ int main() {
 	std::cout << "Before function grande[0] is: " << grande[0] << "\n\n"; // print array before function
 
 	readGPA(grande);
-	printGPA(grande);
 
+	std::cout << "*****************************\n";
+	std::cout << "The average of grande is: " << calculateGPAaverage(grande) << "\n";
 
-	std::cout << "\nAfter function grande[0] is: " << grande[0] << "\n"; // We conclude here that the array is called in the function by reference by default.
+	std::cout << "\nAfter function grande[0] is: " << grande[0] << std::endl; // We conclude here that the array is called in the function by reference by default.
 
 
 	return 0;
