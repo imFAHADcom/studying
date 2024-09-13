@@ -23,7 +23,7 @@ void readBooks(BooksInfo& info) {
 	std::cin.ignore(1, '\n');
 };
 
-void printBooks(BooksInfo& info) {
+void printBooks(const BooksInfo& info) {
 	
 	std::cout << "\n*****************************\n";
 	std::cout << "Book title is: " << info.title << "\n";
@@ -40,7 +40,7 @@ void readAllBooks(BooksInfo books[2]) {
 
 }
 
-void printAllBooks(BooksInfo books[2]) {
+void printAllBooks(const BooksInfo books[2]) {
 	printBooks(books[0]);
 	printBooks(books[1]);
 
