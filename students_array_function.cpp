@@ -9,10 +9,18 @@ struct StudentInfo {
 	float student_gpa;
 };
 
+void readStudentCount(int& studentCount) {
+	
+	std::cout << "How many students do you want to enter information for? ";
+	std::cin >> studentCount;
+
+}
+
 void readInfo(StudentInfo& info, int studentCount) {
 
 	std::cout << "\nStudent count is: " << studentCount << "\n";
 	std::cout << "Enter student name? ";
+	std::cin.ignore(1, '\n');
 	getline(std::cin, info.student_name);
 	std::cout << "Enter student ID number? ";
 	getline(std::cin, info.student_id);
@@ -52,7 +60,9 @@ void printAllInfo(const StudentInfo info[], int studentCount) {
 }
 
 int main() {
-	const int studentCount = 2;
+	int studentCount;
+	readStudentCount(studentCount);
+
 	StudentInfo info[studentCount];
 
 	readAllInfo(info, studentCount);
