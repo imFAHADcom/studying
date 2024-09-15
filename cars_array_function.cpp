@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iostream>
+#include <string>
 
 struct CarsInfo {
 
@@ -10,21 +10,21 @@ struct CarsInfo {
 };
 
 
-void SizeCout(unsigned short int& size) {
+void getCarCout(unsigned short int& size) {
 
 	std::cout << "How many cars do you want to enter information? ";
 	std::cin >> size;
 
 }
 
-void readCars(CarsInfo& info, unsigned short int size) {
+void readCars(CarsInfo& info, unsigned short int carNumber) {
 
-	std::cout << "\nCar number: " << size << "\n";
+	std::cout << "\nCar number: " << carNumber << "\n";
 	std::cout << "Enter car make? ";
 	std::cin.ignore(1, '\n');
 	getline(std::cin, info.car_make);
 	std::cout << "Enter car model? ";
-	getline(std::cin, info.car_make);
+	getline(std::cin, info.car_model);
 	std::cout << "Enter car year? ";
 	std::cin >> info.car_year;
 	std::cout << "Enter car serial number? ";
@@ -61,11 +61,12 @@ void printAllCars(const CarsInfo info[], unsigned short int size) {
 int main() {
 
 	unsigned short int size;
-	SizeCout(size);
+	getCarCout(size);
 
-	CarsInfo info[size];
+	CarsInfo* info = new CarsInfo[size];
 	readAllCars(info, size);
 	printAllCars(info, size);
+	delete[] info;
 
 	return 0;
 }

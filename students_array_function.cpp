@@ -9,14 +9,14 @@ struct StudentInfo {
 	float student_gpa;
 };
 
-void readStudentCount(int& studentCount) {
+void getStudentCount(unsigned short int& size) {
 	
 	std::cout << "How many students do you want to enter information for? ";
-	std::cin >> studentCount;
+	std::cin >> size;
 
 }
 
-void readInfo(StudentInfo& info, int studentCount) {
+void readInfo(StudentInfo& info, unsigned short int studentCount) {
 
 	std::cout << "\nStudent count is: " << studentCount << "\n";
 	std::cout << "Enter student name? ";
@@ -42,31 +42,31 @@ void printInfo(const StudentInfo& info) {
 }
 
 
-void readAllInfo(StudentInfo info[], int studentCount) {
+void readAllInfo(StudentInfo info[], unsigned short int size) {
 	
-	for (int i = 0; i < studentCount; ++i ){
+	for (int i = 0; i < size; ++i ){
 		readInfo(info[i], 1 + i);
 	}
 
 }
 
 
-void printAllInfo(const StudentInfo info[], int studentCount) {
+void printAllInfo(const StudentInfo info[], unsigned short int size) {
 
-	for (int i = 0; i < studentCount; ++i) {
+	for (int i = 0; i < size; ++i) {
 		printInfo(info[i]);
 	}
 
 }
 
 int main() {
-	int studentCount;
-	readStudentCount(studentCount);
+	unsigned short int size;
+	getStudentCount(size);
 
-	StudentInfo info[studentCount];
-
-	readAllInfo(info, studentCount);
-	printAllInfo(info, studentCount);
+	StudentInfo*  info = new StudentInfo[size];
+	readAllInfo(info, size);
+	printAllInfo(info, size);
+	delete[] info;
 
 	return 0;
 }
