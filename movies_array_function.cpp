@@ -4,7 +4,7 @@
 struct MovieInfo {
 	std::string title;
 	std::string director;
-	unsigned short int realease_year;
+	unsigned short int release_year;
 	unsigned short int duration;
 
 };
@@ -23,8 +23,8 @@ void readMovies(MovieInfo& info, unsigned short int movieNum) {
 	getline(std::cin, info.title);
 	std::cout << "Enter movie director? ";
 	getline(std::cin, info.director);
-	std::cout << "Enter movie realease year? ";
-	std::cin >> info.realease_year;
+	std::cout << "Enter movie release year? ";
+	std::cin >> info.release_year;
 	std::cout << "Enter movie duration for minutes? ";
 	std::cin >> info.duration;
 }
@@ -34,7 +34,7 @@ void printMovies(const MovieInfo& info) {
 	std::cout << "\n*******************************\n";
 	std::cout << "Movie title is: " << info.title << "\n";
 	std::cout << "Movie director is: " << info.director << "\n";
-	std::cout << "Movie realease year is: " << info.realease_year << "\n";
+	std::cout << "Movie release year is: " << info.release_year << "\n";
 	std::cout << "Movie duration for minutes is: " << info.duration << "\n";
 	std::cout << "*******************************" << std::endl;
 }
