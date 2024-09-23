@@ -9,10 +9,17 @@ struct BooksInfo {
 
 };
 
-void readBooks(BooksInfo& info, int bookNumber) {
+void getBookCout(unsigned short int& size ) {
+	std::cout << "How many books do you want to enter information? ";
+	std::cin >> size;
+
+}
+
+void readBooks(BooksInfo& info, unsigned short int bookNumber) {
 	
-	std::cout << "\nEnter details for book " << bookNumber << ":\n";
-	std::cout << "Enter book tilte? \n";
+	std::cout << "\nEnter details for book number: " << bookNumber << ":\n";
+	std::cout << "Enter book title? \n";
+	std::cin.ignore(1, '\n');
 	getline(std::cin, info.title);
 	std::cout << "Enter book author? \n";
 	getline(std::cin, info.author);
@@ -35,7 +42,7 @@ void printBooks(const BooksInfo& info) {
 
 }
 
-void readAllBooks(BooksInfo books[], int size) {
+void readAllBooks(BooksInfo books[], unsigned short int size) {
 
 	for (int i = 0; i < size; ++i) {
 	readBooks(books[i], i + 1);
@@ -43,7 +50,7 @@ void readAllBooks(BooksInfo books[], int size) {
 	}
 }
 
-void printAllBooks(const BooksInfo books[], int size) {
+void printAllBooks(const BooksInfo books[], unsigned short int size) {
 
 	for (int i = 0; i < size; ++i) {
 	printBooks(books[i]);
@@ -52,15 +59,16 @@ void printAllBooks(const BooksInfo books[], int size) {
 
 
 int main() {
-	const int numberOfBooks = 2;
-	BooksInfo books[numberOfBooks];
+	unsigned short int size;
+	getBookCout(size);
 
-	readAllBooks(books, numberOfBooks);
-	printAllBooks(books, numberOfBooks);
-	
+
+	BooksInfo* books = new BooksInfo[size]; 
+
+	readAllBooks(books, size);
+	printAllBooks(books, size);
+	delete[] books;
 	
 
 	return 0;
 }
-
-
