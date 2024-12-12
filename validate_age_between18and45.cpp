@@ -1,12 +1,12 @@
 #include <iostream>
 
-void Enterage(unsigned short int& age) {
+void readAge(unsigned short int& age) {
 	std::cout << "Enter your age? \n";
 	std::cin >> age; 
 }
 
 
-void ifage(unsigned short int age) {
+void validateAge(unsigned short int age) {
 	if ( age >= 18 && age <= 45) {
 		std::cout << "Valid Age" << std::endl;
 
@@ -17,10 +17,10 @@ void ifage(unsigned short int age) {
 }
 
 int main() {
-	unsigned short int age;
+	unsigned short int userAge;
 
-	Enterage(age);
-	ifage(age);
+	readAge(userAge);
+	validateAge(userAge);
 
 	return 0;
 }
