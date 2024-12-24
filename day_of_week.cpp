@@ -36,9 +36,7 @@ void checkDay(unsigned short int day) {
 
 	}
 	else {
-		std::cout << "Wrong Day" << std::endl;
-		readDay(day);
-		checkDay(day);
+		std::cout << "Wrong Day!!" << std::endl;
 	}
 }
 
