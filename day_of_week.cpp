@@ -2,7 +2,7 @@
 
 void readDay (unsigned short int& day) {
 
-	std::cout << "choice day number 1 to 7: " << std::endl;
+	std::cout << "Choose day number 1 to 7, Please: " << std::endl;
 	std::cin >> day;
 }
 
@@ -37,7 +37,8 @@ void checkDay(unsigned short int day) {
 	}
 	else {
 		std::cout << "Wrong Day" << std::endl;
-
+		readDay(day);
+		checkDay(day);
 	}
 }
 
