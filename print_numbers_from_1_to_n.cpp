@@ -10,8 +10,8 @@ int getUserInput() {
 }
 
 
-void printNumbersUpTo(int n) {
-	for(int i = 1; i <= n; i++) {
+void printNumbersUpTo(signed short int n) {
+	for(signed short int i = 1; i <= n; i++) {
 		std::cout << i << std::endl; 
 
 	}
