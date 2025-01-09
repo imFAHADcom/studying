@@ -16,7 +16,7 @@ signed int printNumbersEven(signed int number) {
 
 	for(signed short int i = 1; i <= number; i++){
 		if(i % 2 == 0) {
-			sum = sum + i;
+			sum += i;
 		}
 	}
 	return sum;
