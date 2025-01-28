@@ -2,7 +2,7 @@
 
 
 
-int readUser() {
+int readUserInput() {
 	int number;
 	std::cout << "Enter number ?\n";
 	std::cin >> number;
@@ -10,7 +10,7 @@ int readUser() {
 	return number;
 }
 
-void numberLoop(const int& number){
+void printNumbersUpTo(int number){
 
 	int counter = 1;
 	while(number >= counter)
@@ -22,8 +22,8 @@ void numberLoop(const int& number){
 }
 
 int main() {
-	int var = readUser();	
-	numberLoop(var);
+
+	printNumbersUpTo(readUserInput());
 
 	return 0;
 }
