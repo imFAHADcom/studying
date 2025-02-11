@@ -2,11 +2,11 @@
 
 void readMarks(int& marks1, int& marks2, int& marks3)
 {
-	std::cout << "Enter marks 1, Please?\n";
+	std::cout << "Enter mark 1, Please?\n";
 	std::cin >> marks1;
-	std::cout << "Enter marks 2, Please?\n";
+	std::cout << "Enter mark 2, Please?\n";
 	std::cin >> marks2;
-	std::cout << "Enter marks 3, Please?" << std::endl;
+	std::cout << "Enter mark 3, Please?" << std::endl;
 	std::cin >> marks3;
 }
 
