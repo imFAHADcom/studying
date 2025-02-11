@@ -1,6 +1,6 @@
 #include <iostream>
 
-void readNumbers(int& marks1, int& marks2, int& marks3)
+void readMarks(int& marks1, int& marks2, int& marks3)
 {
 	std::cout << "Enter marks 1, Please?\n";
 	std::cin >> marks1;
@@ -10,14 +10,14 @@ void readNumbers(int& marks1, int& marks2, int& marks3)
 	std::cin >> marks3;
 }
 
-int sumOf3Numbers(const int& MARK1, const int& MARK2, const int& MARK3)
+int sumOf3Marks(const int& MARK1, const int& MARK2, const int& MARK3)
 {
 	return MARK1 + MARK2 + MARK3;
 }
 
 float calculateAverage(const int& MARK1, const int& MARK2, const int& MARK3)
 {
-	return float (sumOf3Numbers(MARK1, MARK2, MARK3)) / 3;
+	return float (sumOf3Marks(MARK1, MARK2, MARK3)) / 3;
 }
 
 void printResult(const float& CALCULATE_AVERAGE)
@@ -28,7 +28,7 @@ void printResult(const float& CALCULATE_AVERAGE)
 int main()
 {
 	int marks1, marks2, marks3;
-	readNumbers(marks1, marks2, marks3);
+	readMarks(marks1, marks2, marks3);
 	printResult(calculateAverage(marks1, marks2, marks3));
 
 	return 0;
