@@ -14,7 +14,7 @@ float calculateRactangleArea(const float& length, const float& width)
 	return length * width;
 }
 
-void prfloatRectangleArea(const float& AREA)
+void printRectangleArea(const float& AREA)
 {
 	std::cout << "Rectangle Area is: " << AREA << std::endl;
 }
@@ -24,7 +24,7 @@ int main()
 {
 	float length, width;
 	readRectangleArea(length, width);
-	prfloatRectangleArea(calculateRactangleArea(length, width));
+	printRectangleArea(calculateRactangleArea(length, width));
 
 	return 0;
 }
