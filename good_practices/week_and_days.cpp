@@ -48,7 +48,7 @@ constexpr float daysToWeeks(const float& HOURSE_OF_DAYS){
 int main(){
 	float numberOfHours = readPositiveNumber("Enter Number Of Hours, Please? ");
 	float numberOfDays = hoursToDays(numberOfHours);
-	float numberOfweeks = daysToWeeks(numberOfDays);
+//	float numberOfweeks = daysToWeeks(numberOfDays); // You can use that alternative a function hoursToWeeks(numberOfHours);
 
 	std::cout << "Total Hours = " << numberOfHours << std::endl;
 	std::cout << "Total Days = " << numberOfDays << std::endl;
